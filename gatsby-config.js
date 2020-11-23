@@ -21,7 +21,9 @@ module.exports = {
     {
       resolve: "gatsby-source-strapi",
       options: {
-        apiURL: process.env.API_URL || "http://localhost:1337",
+        apiURL: process.env.DEPLOY_URL
+          ? "https://blooming-beyond-49558.herokuapp.com/ "
+          : "http://localhost:1337",
         contentTypes: ["pages"],
         singleTypes: [`global`],
         queryLimit: 1000,
