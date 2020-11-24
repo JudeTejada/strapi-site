@@ -7,22 +7,7 @@ const LogoImage = styled.img`
   margin: 0;
 `
 export default function Logo() {
-  return (
-    <StaticQuery
-      query={graphql`
-        query {
-          strapiGlobal {
-            footer {
-              logo {
-                publicURL
-              }
-            }
-          }
-        }
-      `}
-      render={data => {
-        return <h1>My Logo</h1>
-      }}
-    />
+  return(
+    <h1>my logo</h1>
   )
 }
