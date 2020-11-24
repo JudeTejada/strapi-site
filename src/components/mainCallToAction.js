@@ -54,10 +54,12 @@ const MainCallToAction = () => (
       return (
         <SectionContainer>
           <SectionTitle>{title}</SectionTitle>
-
+                    
           <ButtonContainer>
             {buttons.map(({ text, type }) => (
-              <CustomButton type={type}>{text}</CustomButton>
+              <CustomButton type={type} key={text}>
+                {text}
+              </CustomButton>
             ))}
           </ButtonContainer>
         </SectionContainer>

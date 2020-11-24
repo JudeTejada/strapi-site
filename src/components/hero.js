@@ -50,7 +50,7 @@ const Hero = () => {
         }
       `}
       render={data => {
-        console.log(data)
+      
         const {
           title,
           description,

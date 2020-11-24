@@ -11,10 +11,7 @@ const FooterContainer = styled.footer`
   padding:2em 0;
   flex-wrap:wrap;
 `
-const LogoImage = styled.img`
-  width: 100%;
-  height: 2rem;
-`
+
 
 const FooterColumns = styled.div`
   display: flex;
@@ -84,11 +81,11 @@ const Footer = () => (
 
             <FooterColumns>
               {columns.map(({ links, title }) => (
-                <div>
+                <div key={title}>
                   <ColumnTitle>{title}</ColumnTitle>
                   <ul>
                     {links.map(({ text, url }) => (
-                      <li>
+                      <li key={text}>
                         <ColumnLink href={url}>{text}</ColumnLink>
                       </li>
                     ))}

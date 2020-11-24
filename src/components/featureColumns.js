@@ -44,7 +44,7 @@ const FeatureColumns = () => (
         <Container>
           <FeaturesContainer>
             {features.map(({ title, description, icon: { publicURL } }) => (
-              <div>
+              <div key={title}>
                 <FeaturesIcon src={publicURL} alt="" />
                 <h3>{title}</h3>
                 <p>{description}</p>
