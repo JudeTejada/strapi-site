@@ -6,7 +6,7 @@ import Container from "./container"
 import Logo from './logo';
 const FooterContainer = styled.footer`
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   padding:2em 0;
   flex-wrap:wrap;
@@ -75,9 +75,8 @@ const Footer = () => (
       return (
         <Container>
           <FooterContainer>
-            <div>
-              <Logo />
-            </div>
+             <Logo />
+          
 
             <FooterColumns>
               {columns.map(({ links, title }) => (
