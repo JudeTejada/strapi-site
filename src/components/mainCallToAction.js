@@ -49,7 +49,7 @@ const MainCallToAction = () => (
       }
     `}
     render={data => {
-      const { title, buttons } = data.strapiPages.contentSections[5]
+      const { title, buttons } = data.strapiPages.contentSections[0]
 
       return (
         <SectionContainer>

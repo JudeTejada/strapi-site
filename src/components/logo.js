@@ -10,19 +10,20 @@ export default function Logo() {
   return (
     <StaticQuery
       query={graphql`
-        {
-          strapiGlobal {
-            footer {
-              logo {
-                publicURL
-              }
+      query  {
+        strapiGlobal {
+          footer {
+            logo {
+              url
             }
           }
         }
+      }
+      
       `}
       render={data => {
       
-        return <LogoImage src={data.strapiGlobal.footer.logo.publicURL} />
+        return <LogoImage src={data.strapiGlobal.footer.logo.url} />
       }}
     />
   )

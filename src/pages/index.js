@@ -8,22 +8,17 @@ import FeatureColumns from "../components/featureColumns"
 import FeatureRows from "../components/featureRows"
 import MainCallToAction from "../components/mainCallToAction"
 const IndexPage = () => {
-
-
   return (
     <Layout>
       <SEO title="Home" />
-      {/* <Hero />
+  
+      <Hero />
       <FeatureRows />
       <FeatureColumns />
-     
-      
-     */}
-      <MainCallToAction /> 
+
+      <MainCallToAction />
     </Layout>
   )
 }
-
-
 
 export default IndexPage
