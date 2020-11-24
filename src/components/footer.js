@@ -55,9 +55,7 @@ const Footer = () => (
           footer {
          
             smallText
-            logo{
-              url
-            }
+          
             columns {
               title
               links {
@@ -73,7 +71,6 @@ const Footer = () => (
      
       const {
         columns,
-        logo: { url },
         smallText,
       } = data.strapiGlobal.footer
   

@@ -29,7 +29,7 @@ const Hero = () => {
   return (
     <StaticQuery
       query={graphql`
-      query MyQuery {
+      query {
         strapiPages {
           contentSections {
             title

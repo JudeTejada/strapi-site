@@ -14,14 +14,15 @@ export default function Logo() {
           strapiGlobal {
             footer {
               logo {
-                url
+                publicURL
               }
             }
           }
         }
       `}
       render={data => {
-        return <LogoImage src={data.strapiGlobal.footer.logo.url} alt="logo" />
+      
+        return <LogoImage src={data.strapiGlobal.footer.logo.publicURL} />
       }}
     />
   )
