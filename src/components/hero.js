@@ -49,18 +49,13 @@ const Hero = () => {
           }
         }
       `}
-      render={data => {
-      
+      render={query => {
         const {
           title,
           description,
-          picture: {
-            childImageSharp: {
-              fixed: { src },
-            },
-          },
+          picture,
           buttons,
-        } = data.strapiPages.contentSections[0]
+        } = query.strapiPages.contentSections[0]
 
         const { text, type } = buttons[0]
 
@@ -74,7 +69,10 @@ const Hero = () => {
               </HeroTextSection>
 
               <div>
-                <HeroImage src={`${src}`} alt="" />
+                <HeroImage
+                  src={`${picture.childImageSharp.fixed.src}`}
+                  alt=""
+                />
               </div>
             </HeroContainer>
           </Container>
