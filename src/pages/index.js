@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 
@@ -9,7 +8,7 @@ import FeatureColumns from "../components/featureColumns"
 import FeatureRows from "../components/featureRows"
 import MainCallToAction from "../components/mainCallToAction"
 const IndexPage = () => {
-  // const data = useStaticQuery(query)
+
 
   return (
     <Layout>
@@ -18,34 +17,11 @@ const IndexPage = () => {
       <FeatureRows />
       <FeatureColumns />
       <MainCallToAction /> 
-      {/*  */}
-      {/* 
-   
-
-   */}
-       {/**/}
+    
     </Layout>
   )
 }
 
-// const query = graphql`
-// query  {
-//   strapiPages {
-//     contentSections {
-//       description
-//       title
-//       image {
-//         childImageSharp {
-//           fixed {
-//             src
-//           }
-//         }
-//       }
-//       Button {
-//         text
-//       }
-//     }
-//   }
-// }
+
 
 export default IndexPage

@@ -52,7 +52,7 @@ const FeatureRows = () => (
       return (
       <Container>
           {features.map(({ title, description, media: { publicURL } }, i) => (
-            <FeatureRowContainer reverse={i % 2 === 0 ? "row-reverse" : "row"}>
+            <FeatureRowContainer reverse={i % 2 === 0 ? "row-reverse" : "row"} key={i}>
               <FeaturedDescriptionRow>
                 <h2>{title}</h2>
                 <p>{description}</p>

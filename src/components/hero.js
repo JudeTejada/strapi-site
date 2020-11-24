@@ -29,34 +29,40 @@ const Hero = () => {
   return (
     <StaticQuery
       query={graphql`
-      query {
-        strapiPages {
-          contentSections {
-            title
-            description
-            picture {
-              publicURL
-            }
-            buttons {
-              text
-              type
+        {
+          strapiPages {
+            contentSections {
+              picture {
+                childImageSharp {
+                  fixed {
+                    src
+                  }
+                }
+              }
+              title
+              description
+              buttons {
+                text
+                type
+              }
             }
           }
         }
-      }
-      
-      
       `}
       render={data => {
+        console.log(data)
         const {
           title,
           description,
-          picture: { publicURL },
+          picture: {
+            childImageSharp: {
+              fixed: { src },
+            },
+          },
           buttons,
         } = data.strapiPages.contentSections[0]
 
         const { text, type } = buttons[0]
-      
 
         return (
           <Container>
@@ -68,7 +74,7 @@ const Hero = () => {
               </HeroTextSection>
 
               <div>
-                <HeroImage src={`${publicURL}`} alt="" />
+                <HeroImage src={`${src}`} alt="" />
               </div>
             </HeroContainer>
           </Container>
