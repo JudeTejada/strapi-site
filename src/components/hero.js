@@ -57,15 +57,13 @@ const Hero = () => {
           buttons,
         } = query.strapiPages.contentSections[0]
 
-        const { text, type } = buttons[0]
-
         return (
           <Container>
             <HeroContainer>
               <HeroTextSection>
                 <h1> {title}</h1>
                 <p>{description}</p>
-                <CustomButton type={type}>{text}</CustomButton>
+                <CustomButton type={"primary"}>Get started</CustomButton>
               </HeroTextSection>
 
               <div>
