@@ -13,7 +13,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      {/* <Hero /> */}
+      <Hero />
       <FeatureRows />
       <FeatureColumns />
       <MainCallToAction /> 

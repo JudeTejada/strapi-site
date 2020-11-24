@@ -21,7 +21,9 @@ module.exports = {
     {
       resolve: "gatsby-source-strapi",
       options: {
-        apiURL:  "https://protected-springs-37395.herokuapp.com",
+        apiURL: process.env.DEPLOY_URL
+          ? "https://protected-springs-37395.herokuapp.com"
+          : "http:localhost:1337",
         contentTypes: ["pages"],
         singleTypes: [`global`],
         queryLimit: 1000,
