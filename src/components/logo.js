@@ -10,14 +10,15 @@ export default function Logo() {
   return (
     <StaticQuery
       query={graphql`
-      query  {
-        strapiGlobal {
-          footer {
-           
+        query {
+          strapiGlobal {
+            footer {
+              logo {
+                publicURL
+              }
+            }
           }
         }
-      }
-      
       `}
       render={data => {
         return <h1>My Logo</h1>
