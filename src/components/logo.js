@@ -13,16 +13,13 @@ export default function Logo() {
       query  {
         strapiGlobal {
           footer {
-            logo {
-              url
-            }
+           
           }
         }
       }
       
       `}
       render={data => {
-      
         return <h1>My Logo</h1>
       }}
     />
