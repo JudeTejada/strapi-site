@@ -16,8 +16,10 @@ const IndexPage = () => {
       {/* <Hero />
       <FeatureRows />
       <FeatureColumns />
-      <MainCallToAction /> 
+     
+      
      */}
+      <MainCallToAction /> 
     </Layout>
   )
 }
