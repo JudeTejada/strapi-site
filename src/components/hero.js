@@ -25,33 +25,27 @@ const HeroTextSection = styled.div`
   align-self: center;
 `
 
-
 const Hero = () => {
-
-
   return (
     <StaticQuery
       query={graphql`
-        {
-          allStrapiPages {
-            edges {
-              node {
-                contentSections {
-                  title
-                  description
-                  picture {
-                    publicURL
-                  }
-                  buttons {
-                    text
-                    url
-                    type
-                  }
-                }
-              }
+      query MyQuery {
+        strapiPages {
+          contentSections {
+            title
+            description
+            picture {
+              publicURL
+            }
+            buttons {
+              text
+              type
             }
           }
         }
+      }
+      
+      
       `}
       render={data => {
         const {
@@ -59,9 +53,10 @@ const Hero = () => {
           description,
           picture: { publicURL },
           buttons,
-        } = data.allStrapiPages.edges[0].node.contentSections[0]
+        } = data.strapiPages.contentSections[0]
 
         const { text, type } = buttons[0]
+      
 
         return (
           <Container>

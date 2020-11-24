@@ -3,7 +3,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import Container from "./container"
-
+import Logo from './logo';
 const NavbarContainer = styled.nav`
   display: flex;
   align-items: center;
@@ -13,11 +13,7 @@ const NavbarContainer = styled.nav`
   margin-bottom:1em;
 `
 
-const Logo = styled.h1`
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0;
-`
+
 
 const NavbarList = styled.ul`
   display: flex;
@@ -109,8 +105,7 @@ function Navbar() {
       <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
     </svg>
   )
-  const [toggle, setToggle] = useState(true)
-  console.log(toggle)
+  const [toggle, setToggle] = useState(false)
 
   return (
     <StaticQuery
@@ -131,11 +126,11 @@ function Navbar() {
         return (
           <Container>
             <NavbarContainer>
-              <Logo>{data.strapiGlobal.navbar.logo}</Logo>
+              <Logo />
 
               <NavbarList>
                 {data.strapiGlobal.navbar.links.map(({ text, url }) => (
-                  <NavbarLink to={`${url}`}>{text}</NavbarLink>
+                  <NavbarLink  key={text}to={`${url}`}>{text}</NavbarLink>
                 ))}
               </NavbarList>
 
@@ -154,10 +149,10 @@ function Navbar() {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "space-between",
-                        padding: "0.5em 0 3em 0",
+                        padding: "1em 0 3em 0",
                       }}
                     >
-                      <Logo>{data.strapiGlobal.navbar.logo}</Logo>
+                      <Logo />
                       <HamburgerButton onClick={() => setToggle(false)}>
                         <svg
                           stroke="currentColor"

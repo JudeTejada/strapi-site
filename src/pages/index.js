@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import Hero from "../components/hero"
 import FeatureColumns from "../components/featureColumns"
 import FeatureRows from "../components/featureRows"
-import MainCallToAction from '../components/mainCallToAction';
+import MainCallToAction from "../components/mainCallToAction"
 const IndexPage = () => {
   // const data = useStaticQuery(query)
 
@@ -17,10 +17,13 @@ const IndexPage = () => {
       <Hero />
       <FeatureRows />
       <FeatureColumns />
-      <MainCallToAction />
-      {/*  />
-    
-    */}
+      <MainCallToAction /> 
+      {/*  */}
+      {/* 
+   
+
+   */}
+       {/**/}
     </Layout>
   )
 }

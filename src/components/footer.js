@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import Container from "./container"
-
+import Logo from './logo';
 const FooterContainer = styled.footer`
   display: flex;
   align-items: center;
@@ -53,10 +53,11 @@ const Footer = () => (
       {
         strapiGlobal {
           footer {
-            logo {
-              publicURL
-            }
+         
             smallText
+            logo{
+              url
+            }
             columns {
               title
               links {
@@ -72,7 +73,7 @@ const Footer = () => (
      
       const {
         columns,
-        logo: { publicURL },
+        logo: { url },
         smallText,
       } = data.strapiGlobal.footer
   
@@ -81,7 +82,7 @@ const Footer = () => (
         <Container>
           <FooterContainer>
             <div>
-              <LogoImage src={publicURL} alt="logo" />
+              <Logo />
             </div>
 
             <FooterColumns>
