@@ -23,7 +23,7 @@ export default function Logo() {
       `}
       render={data => {
       
-        return <LogoImage src={data.strapiGlobal.footer.logo.url} />
+        return <h1>My Logo</h1>
       }}
     />
   )
